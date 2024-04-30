@@ -12,14 +12,12 @@ jobs:
 
     - name: Print the value of MY_VARIABLE
       run: MY_VARIABLE='Hello, GitHub Actions!' && echo $MY_VARIABLE
-        
-      env:
-        DAY_OF_WEEK: Monday
-      
+         
   greeting_job:
     runs-on: ubuntu-latest
     env:
         Greeting: Hello
+        DAY_OF_WEEK: Monday
     steps:
     - name: "Say Hello Mona it's Monday"
       run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
